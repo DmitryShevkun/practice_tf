@@ -1,0 +1,19 @@
+aws_codedeploy_deployment_config
+
+  deployment_config_name
+  compute_platform
+
+  minimum_healthy_hosts
+    type
+    value
+
+  traffic_routing_config
+    type
+    
+    time_based_canary
+      interval
+      percentage
+
+    time_based_linear
+      interval
+      percentage

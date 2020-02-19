@@ -1,0 +1,56 @@
+
+# Main
+
+  var_aws_codedeploy_deployment_config = {
+
+    # Required
+    deployment_config_name       = "default-deployment-config-name"
+
+    # Optional
+    compute_platform             = ""
+  }
+
+
+# Blocks
+
+# minimum_healthy_hosts
+
+  var_minimum_healthy_hosts = {
+
+    create                       = "false"
+
+    type                         = ""
+    value                        = ""number
+  }
+
+
+# traffic_routing_config
+
+  var_traffic_routing_config = {
+
+    create                       = "false"
+
+    type                         = ""
+  }
+
+
+### time_based_canary
+
+  var_time_based_canary = {
+
+    create                       = "false"
+
+    interval                     = ""number
+    percentage                   = ""number
+  }
+
+
+### time_based_linear
+
+  var_time_based_linear = {
+
+      create                       = "false"
+
+      interval                     = ""number
+      percentage                   = ""number
+  }

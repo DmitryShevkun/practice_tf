@@ -1,0 +1,201 @@
+
+# Main variables
+
+  var_aws_codedeploy_deployment_group_main = {
+
+    app_name               = ""
+    deployment_group_name  = ""
+    service_role_arn       = ""
+
+    autoscaling_groups     = []
+    deployment_config_name = ""
+  }
+
+
+##############################     Nested Blocks     ##############################
+
+# alarm_configuration
+
+  var_alarm_configuration = {
+
+    create                    = "false"
+
+    enabled                   = "false"
+    ignore_poll_alarm_failure = "false"
+    alarms                    = []
+  }
+
+
+# auto_rollback_configuration
+  
+  var_auto_rollback_configuration = {
+
+    create                    = "false"
+
+    enabled                   = "false"
+    events                    = []
+  }
+
+
+# deployment_style
+
+  var_deployment_style = {
+
+    create                    = "false"
+      
+    option                    = ""
+    type                      = ""
+  }
+
+
+# ecs_service
+
+  var_ecs_service = {
+
+    create                    = "false"
+
+    cluster_name              = ""
+    service_name              = ""
+  }
+
+
+# trigger_configuration
+
+  var_trigger_configuration = {
+
+    create                    = "false"
+
+    trigger_events            = []
+    trigger_name              = ""
+    trigger_target_arn        = ""
+  }
+
+
+##############################     blue_green_deployment_config block     ##############################
+
+  var_blue_green_deployment_config = {
+
+    create = "false"
+  }
+
+
+### deployment_ready_option
+
+  var_deployment_ready_option = {
+
+    create                           = "false"
+
+    action_on_timeout                = ""
+    wait_time_in_minutes             = ""number
+  }  
+    
+
+### green_fleet_provisioning_option
+
+  var_green_fleet_provisioning_option = {
+
+    create                           = "false"
+
+    action                           = ""
+  }
+
+
+### terminate_blue_instances_on_deployment_success
+
+  var_terminate_blue_instances_on_deployment_success = {
+
+    create                           = "false"
+
+    action                           = ""
+    termination_wait_time_in_minutes = ""number
+  }
+
+
+##############################     load_balancer_info block     ##############################
+
+  var_load_balancer_info = {
+
+    create                           = "false"
+  }
+
+
+### elb_info
+
+  var_elb_info = {
+
+    create                           = "false"
+
+    name                             = ""
+  }
+
+
+### target_group_info
+
+  var_target_group_info = {
+
+    create                           = "false"
+
+    name                             = ""
+  }
+
+
+### target_group_pair_info
+
+  var_target_group_pair_info = {
+
+    create                           = "false"
+
+    prod_traffic_route_listener_arns = []
+    target_group_name                = ""
+    test_traffic_route_listener_arns = []
+  }
+
+
+##############################     Tag Filters     ##############################
+
+### ec2_tag_set
+
+  var_ec2_tag_set = {
+
+    create                           = "false"
+  }
+
+### ec2_tag_filter # no more than 3
+
+  var_ec2_tag_filter = [
+    {
+      key                            = ""
+      type                           = ""
+      value                          = ""
+    },
+    {
+      key                            = ""
+      type                           = ""
+      value                          = ""
+    },
+    {
+      key                            = ""
+      type                           = ""
+      value                          = ""
+    },
+  ]
+
+### on_premises_instance_tag_filter # no more than 3
+
+  var_on_premises_instance_tag_filters = [
+    {
+      key                            = ""
+      type                           = ""
+      value                          = ""
+    },
+    {
+      key                            = ""
+      type                           = ""
+      value                          = ""
+    },
+    {
+      key                            = ""
+      type                           = ""
+      value                          = ""
+    },
+  ]

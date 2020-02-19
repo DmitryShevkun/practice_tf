@@ -1,0 +1,89 @@
+Resource
+
+aws_codedeploy_deployment_group
+
+Required
+
+    app_name               = string
+    deployment_group_name  = string
+    service_role_arn       = string
+
+
+Optional
+
+    autoscaling_groups     = list(string)
+    deployment_config_name = string
+
+
+Blocks
+
+    alarm_configuration
+
+        enabled
+        ignore_poll_alarm_failure
+        alarms
+
+
+    auto_rollback_configuration
+
+        enabled
+        events
+
+
+    deployment_style
+
+        deployment_option
+        deployment_type
+
+
+    ecs_service
+
+        cluster_name
+        service_name
+
+
+    trigger_configuration
+
+        trigger_name
+        trigger_target_arn
+        trigger_events
+
+        
+    blue_green_deployment_config
+
+        deployment_ready_option
+            action_on_timeout
+            wait_time_in_minutes
+
+        green_fleet_provisioning_option
+            action
+ 
+        terminate_blue_instances_on_deployment_success
+            action
+            termination_wait_time_in_minutes
+
+
+    load_balancer_info
+
+        elb_info
+            name
+
+        target_group_info
+            name
+
+        target_group_pair_info
+            prod_traffic_route
+                listener_arns
+
+            target_group
+                name
+                
+            test_traffic_route
+                listener_arns
+
+
+Tag Filters
+
+    ec2_tag_filter
+    ec2_tag_set
+    on_premises_instance_tag_filter

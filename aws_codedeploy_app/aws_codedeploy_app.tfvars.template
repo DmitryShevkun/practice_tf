@@ -1,0 +1,4 @@
+
+  var_aws_codedeploy_app_name             = "default-codedeploy-name"
+
+  var_aws_codedeploy_app_compute_platform = ""
