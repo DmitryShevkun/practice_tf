@@ -1,8 +1,1 @@
-# private
-
-echo "# private" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/DmitryShevkun/private.git
-git push -u origin master
+# practice_tf
